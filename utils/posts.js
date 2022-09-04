@@ -9,7 +9,7 @@ export const generateDefaultThumb = cat => {
       break;
   }
 };
-export const reloadPosts = 50;
+export const reloadPosts = 25;
 export function generateSlug(cat, slug) {
   return `/${cat.toLowerCase()}/${slug}`;
 }

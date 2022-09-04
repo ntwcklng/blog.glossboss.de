@@ -9,6 +9,28 @@ export function CategoryLabel(props) {
     Videos: "text-green-600",
     Produkttest: "text-pink-600"
   };
+  const colorBg = {
+    Allgemein: "bg-emerald-300",
+    News: "bg-blue-200",
+    Pflegeberichte: "bg-orange-200",
+    Podcast: "bg-purple-200",
+    Anleitungen: "bg-pink-300",
+    Videos: "bg-green-200",
+    Produkttest: "bg-pink-200"
+  };
+  if (props.plain) {
+    return (
+      <span
+        className={cx(
+          "inline-block text-xs font-medium tracking-wider uppercase ",
+          `hover:${color[props.children] || color.News}`,
+
+          props.className
+        )}>
+        {props.children}
+      </span>
+    );
+  }
   if (props.large) {
     return (
       <h1
@@ -23,8 +45,9 @@ export function CategoryLabel(props) {
     return (
       <span
         className={cx(
-          "inline-block mt-5 text-xs font-medium tracking-wider uppercase ",
-          color[props.children] || color.News
+          "inline-block text-xs font-medium tracking-wider uppercase ",
+          color[props.children] || color.News,
+          props.className
         )}>
         {props.children}
       </span>

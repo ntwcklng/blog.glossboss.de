@@ -63,9 +63,9 @@ export default function Post({ post }) {
               <CategoryLabel>{post.fields.category}</CategoryLabel>
             </a>
           </div>
-          <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-gray-200 text-gray-600">
+          <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-gray-200 text-gray-700">
             {post.fields.title}{" "}
-            <span className="text-xl dark:text-gray-300 inline-block text-gray-500">
+            <span className="text-xl dark:text-gray-300 inline-block text-gray-600">
               {post.fields.subTitle}
             </span>
           </h1>

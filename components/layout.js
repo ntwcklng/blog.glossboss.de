@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 import Navbar from "@components/navbar";
 import Container from "./container";
-
+import { ScrollTop } from "./scrollTop";
 import Footer from "@components/footer";
 
 export default function Layout(props) {
@@ -30,6 +30,7 @@ export default function Layout(props) {
       <div className="antialiased text-gray-800 dark:bg-gray-900 dark:text-gray-400">
         <Navbar />
         <div>{children}</div>
+        <ScrollTop />
         <Footer />
       </div>
     </>
