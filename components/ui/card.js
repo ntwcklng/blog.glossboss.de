@@ -11,49 +11,82 @@ import { CategoryLabel } from "@components/ui/categoryLabel";
 import { format, parseISO } from "date-fns";
 import { glossbosse } from "@lib/config";
 
-export default function Card({ data, aspect, key = "" }) {
+export default function Card({ data, aspect }) {
+  const isExternal =
+    typeof data?.externerLink === "string" &&
+    data.externerLink?.length > 1;
   return (
-    <div className="cursor-pointer group" key={key}>
+    <div className="cursor-pointer group" key={data.slug}>
       <div
         className={cx(
           "relative overflow-hidden transition-all bg-gray-100 rounded-md dark:bg-gray-600  hover:scale-105",
           aspect === "landscape" ? "aspect-video" : "aspect-[4/3]"
         )}>
-        <Link href={generateSlug(data?.category, data?.slug)}>
-          <Image
-            layout="fill"
-            objectFit="cover"
-            className="transition-all"
-            alt={data.title}
-            priority={true}
-            src={
-              data.postImage
-                ? data.postImage.replace(
-                    "amazonaws.com",
-                    "amazonaws.com/thumbnails"
-                  )
-                : generateDefaultThumb(data.category)
-            }
-          />
+        <Link
+          href={
+            isExternal
+              ? data.externerLink
+              : generateSlug(data?.category, data?.slug)
+          }>
+          <a target={isExternal ? "_blank" : "_self"}>
+            <Image
+              layout="fill"
+              objectFit="cover"
+              className="transition-all"
+              alt={data.title}
+              priority={true}
+              src={
+                data.postImage
+                  ? data.postImage.replace(
+                      "amazonaws.com",
+                      "amazonaws.com/thumbnails"
+                    )
+                  : generateDefaultThumb(data.category)
+              }
+            />
+          </a>
         </Link>
       </div>
       <CategoryLabel>{data.category}</CategoryLabel>
       <h2 className="mt-2 text-lg font-semibold dark:text-gray-100 text-gray-700">
-        <Link href={generateSlug(data?.category, data?.slug)}>
-          <span
-            className="     bg-gradient-to-r from-purple-200 to-green-200 dark:from-purple-700 dark:to-fuchsia-700
+        <Link
+          href={
+            isExternal
+              ? data.externerLink
+              : generateSlug(data?.category, data?.slug)
+          }>
+          <a
+            target={isExternal ? "_blank" : "_self"}
+            className="bg-gradient-to-r from-purple-200 to-green-200 dark:from-purple-700 dark:to-fuchsia-700
           bg-[length:0px_10px]
           bg-left-bottom
           bg-no-repeat
           transition-[background-size]
           duration-300
           hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+            {isExternal ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-4 h-4 mr-1 inline">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            ) : (
+              ""
+            )}
             {data.title}
             <span className="text-sm dark:text-gray-400 text-gray-800">
               {" "}
               - {data.subTitle}
             </span>
-          </span>
+          </a>
         </Link>
       </h2>
       <div className="flex items-center mt-3 space-x-3 text-gray-500 dark:text-gray-300">

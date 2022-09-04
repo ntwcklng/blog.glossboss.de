@@ -35,7 +35,7 @@ export function CategoryLabel(props) {
     return (
       <h1
         className={cx(
-          "mt-2 mb-3 text-3xl font-semibold text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white tracking-wider uppercase",
+          "mt-2 mb-3 text-3xl font-bold text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white tracking-wider uppercase",
           color[props.children] || color.News
         )}>
         {props.children}

@@ -25,7 +25,11 @@ export default function Post({ post }) {
           title: `${post.fields.title} - ${post.fields.subTitle}`,
           description: "",
           images: [
-            { url: post.fields.postImage, width: 800, height: 600 }
+            {
+              url: post.fields.postImage || "",
+              width: 800,
+              height: 600
+            }
           ],
           site_name: siteName
         }}
@@ -36,7 +40,7 @@ export default function Post({ post }) {
           post.fields.slug
         }`}
         title={`${post.fields.title} - ${post.fields.subTitle}`}
-        images={[post.fields.postImage]}
+        images={[post.fields.postImage || ""]}
         authorName={glossbosse[post?.fields.author].displayName}
         datePublished={post.fields.date}
       />
@@ -100,14 +104,18 @@ export default function Post({ post }) {
           </div>
         </div>
       </Container>
-      <div className="relative z-0 max-w-screen-lg mx-auto overflow-hidden lg:rounded-lg aspect-video">
-        <Image
-          src={post.fields.postImage}
-          alt={post.fields.title}
-          layout="fill"
-          loading="eager"
-          objectFit="cover"
-        />
+      <div className="relative z-0 max-w-screen-lg mx-auto overflow-hidden lg:rounded-lg">
+        {post.fields.postImage ? (
+          <Image
+            src={post.fields.postImage}
+            alt={post.fields.title}
+            layout="fill"
+            loading="eager"
+            objectFit="cover"
+          />
+        ) : (
+          <div className="bg-gradient-to-r from-[#00f260] to-[#0575e6] h-56 animate-pulse"></div>
+        )}
       </div>
 
       <Container>

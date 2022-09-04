@@ -1,5 +1,6 @@
 import ThemeSwitch from "@components/themeSwitch";
 import Container from "./container";
+import SocialMedia from "./socialMedia";
 export default function Footer(props) {
   return (
     <>
@@ -8,6 +9,7 @@ export default function Footer(props) {
           Copyright © {new Date().getFullYear()} GLOSSBOSS. Mit ❤️
           gemacht.
         </div>
+        <SocialMedia />
         <ThemeSwitch />
       </Container>
     </>
