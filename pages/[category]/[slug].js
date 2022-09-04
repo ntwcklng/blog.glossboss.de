@@ -104,7 +104,9 @@ export default function Post({ post }) {
           </div>
         </div>
       </Container>
-      <div className="relative z-0 max-w-screen-lg mx-auto overflow-hidden lg:rounded-lg">
+      <div
+        className={`relative z-0 max-w-screen-lg mx-auto overflow-hidden lg:rounded-lg ${post
+          .fields.postImage && "aspect-video"}`}>
         {post.fields.postImage ? (
           <Image
             src={post.fields.postImage}

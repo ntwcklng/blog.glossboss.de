@@ -32,7 +32,7 @@ export default function PostList({ posts = [], category = "" }) {
       {posts.length > postsToShow && (
         <button
           onClick={loadMorePosts}
-          className="mx-auto inline-flex mt-12 mb-6 justify-center rounded-md bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+          className="mx-auto inline-flex mt-12 mb-6 justify-center rounded-md bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:bg-gray-600 dark:text-gray-200">
           weitere {Math.min(reloadPosts, posts.length - postsToShow)}{" "}
           Beiträge laden{" "}
         </button>
