@@ -44,15 +44,18 @@ export default function Navbar(props) {
                 </div>
                 <div className="flex justify-between items-center w-full lg:w-auto">
                   <Link href="/">
-                    <Image
-                      src="/glossboss-logo.svg"
-                      alt="Logo"
-                      width={250}
-                      height={100}
-                      priority={true}
-                      layout="fixed"
-                      className="cursor-pointer"
-                    />
+                    <a>
+                      {" "}
+                      <Image
+                        src="/glossboss-logo.svg"
+                        alt="Logo"
+                        width={250}
+                        height={100}
+                        priority={true}
+                        layout="fixed"
+                        className="cursor-pointer"
+                      />
+                    </a>
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"

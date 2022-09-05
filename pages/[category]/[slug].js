@@ -114,6 +114,7 @@ export default function Post({ post }) {
             layout="fill"
             loading="eager"
             objectFit="cover"
+            priority={true}
           />
         ) : (
           <div className="bg-gradient-to-r from-[#00f260] to-[#0575e6] h-56 animate-pulse"></div>
