@@ -17,8 +17,10 @@ export default function Home({ posts, glossboss }) {
 }
 export async function getStaticProps(context) {
   const glossboss =
-    context.params.glossboss.toLowerCase().charAt(0).toUpperCase() +
-    context.params.glossboss.slice(1);
+    context.params.glossboss
+      .toLowerCase()
+      .charAt(0)
+      .toUpperCase() + context.params.glossboss.slice(1);
   const posts = await getPosts("", glossboss);
   return {
     props: {
@@ -41,8 +43,6 @@ export async function getStaticPaths() {
       }
     }
   }
-  console.log(paths);
-
   return {
     paths,
     fallback: false

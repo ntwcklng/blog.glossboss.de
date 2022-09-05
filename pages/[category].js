@@ -10,10 +10,14 @@ import Link from "next/link";
 import { forwardRef, Fragment, useEffect, useState } from "react";
 import Container from "@components/container";
 import CategoryFilter from "@components/categoryFilter";
+import { siteUrl } from "@lib/config";
 
 export default function Home({ posts, category }) {
   return (
-    <Layout>
+    <Layout
+      url={`${siteUrl}/${category.toLowerCase()}`}
+      title={`GLOSSBOSS Blog - ${category}`}
+      description={`Alle Blogbeiträge der Kategorie ${category}`}>
       <CategoryLabel large={true}>{category}</CategoryLabel>
       <Container className="!py-0">
         <CategoryFilter />

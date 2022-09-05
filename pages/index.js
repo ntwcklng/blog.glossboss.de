@@ -4,10 +4,14 @@ import getPosts from "@utils/getPosts";
 import Layout from "@components/layout";
 import CategoryFilter from "@components/categoryFilter";
 import Container from "@components/container";
+import { siteUrl } from "@lib/config";
 
 export default function Home({ posts }) {
   return (
-    <Layout>
+    <Layout
+      url={`${siteUrl}/`}
+      title="GLOSSBOSS Autopflege Blog"
+      description="Der erste Blog über die Professionelle Fahrzeugpflege in Deutschland">
       <Container className="!py-0">
         <CategoryFilter />
       </Container>

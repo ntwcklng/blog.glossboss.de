@@ -1,4 +1,4 @@
-import { Disclosure } from "@headlessui/react";
+import { Disclosure, Transition } from "@headlessui/react";
 import Link from "next/link";
 import Image from "next/image";
 import Container from "./container";
@@ -6,7 +6,7 @@ import Container from "./container";
 export default function Navbar(props) {
   const leftmenu = [
     { label: "Startseite", href: "/" },
-    { label: "Über", href: "/about-us" },
+    { label: "Über uns", href: "/about-us" },
     { label: "Mischungsrechner", href: "/mischungsrechner" }
   ];
   const rightmenu = [
@@ -30,7 +30,7 @@ export default function Navbar(props) {
           {({ open }) => (
             <>
               <div className="flex flex-wrap justify-between md:gap-10 md:flex-nowrap">
-                <div className="flex-col items-center justify-start order-1 hidden w-full lg:flex lg:flex-row lg:justify-end lg:w-auto lg:order-none lg:flex-1">
+                <div className="flex-col items-center justify-start order-1 hidden w-full lg:flex lg:flex-row lg:justify-end lg:w-auto lg:order-none lg:flex-1 whitespace-nowrap">
                   {leftmenu.map((item, index) => (
                     <Link href={item.href} key={index}>
                       <a
@@ -107,37 +107,45 @@ export default function Navbar(props) {
                   ))}
                 </div>
               </div>
-              <Disclosure.Panel>
-                <div className="flex flex-col items-center justify-start order-2 w-full lg:hidden">
-                  {mobilemenu.map((item, index) => (
-                    <Link href={item.href} key={index}>
-                      <a
-                        className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
-                        target={item.external ? "_blank" : ""}
-                        rel={item.external ? "noopener" : ""}>
-                        {item.label}{" "}
-                        {item.external ? (
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={1.5}
-                            stroke="currentColor"
-                            className="w-3 h-3 inline">
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                            />
-                          </svg>
-                        ) : (
-                          ""
-                        )}
-                      </a>
-                    </Link>
-                  ))}
-                </div>
-              </Disclosure.Panel>
+              <Transition
+                enter="transition duration-200 ease-out"
+                enterFrom="transform scale-99 opacity-0 "
+                enterTo="transform scale-100 opacity-100 "
+                leave="transition duration-200 ease-out"
+                leaveFrom="transform scale-100 opacity-100 "
+                leaveTo="transform scale-99 opacity-0 ">
+                <Disclosure.Panel>
+                  <div className="flex flex-col items-center justify-start order-2 w-full lg:hidden border-b border-gray-100 dark:border-gray-600 pb-8">
+                    {mobilemenu.map((item, index) => (
+                      <Link href={item.href} key={index}>
+                        <a
+                          className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
+                          target={item.external ? "_blank" : ""}
+                          rel={item.external ? "noopener" : ""}>
+                          {item.label}{" "}
+                          {item.external ? (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              strokeWidth={1.5}
+                              stroke="currentColor"
+                              className="w-3 h-3 inline">
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                              />
+                            </svg>
+                          ) : (
+                            ""
+                          )}
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
+                </Disclosure.Panel>
+              </Transition>
             </>
           )}
         </Disclosure>

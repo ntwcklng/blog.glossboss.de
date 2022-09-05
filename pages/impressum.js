@@ -1,10 +1,14 @@
 import { NextSeo } from "next-seo";
 import Layout from "@components/layout";
 import Container from "@components/container";
+import { siteUrl } from "@lib/config";
 
 export default function Home({ posts }) {
   return (
-    <Layout>
+    <Layout
+      url={`${siteUrl}/impressum`}
+      title="GLOSSBOSS Impressum"
+      description="Impressum">
       <Container>
         <div className="mx-auto my-3 prose-base dark:prose-invert prose-a:text-blue-500">
           <p>Marvin Mieth</p>

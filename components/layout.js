@@ -18,9 +18,7 @@ export default function Layout(props) {
           description: props.description,
           images: [
             {
-              url: "ogimage",
-              width: 800,
-              height: 600,
+              url: "",
               alt: props.title
             }
           ],

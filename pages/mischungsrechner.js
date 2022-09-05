@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import dilution from "dilution";
 import { Disclosure } from "@headlessui/react";
 import { Button } from "@components/ui/button";
+import { siteUrl } from "@lib/config";
 
 export default function Mischungsrechner() {
   const [in1, setIn1] = useState(1);
@@ -43,7 +44,10 @@ export default function Mischungsrechner() {
     );
   }, [in1, in2, inBottle]);
   return (
-    <Layout>
+    <Layout
+      url={`${siteUrl}/mischungsrechner`}
+      title="GLOSSBOSS Mischungsrechner"
+      description="Berechne Das Mischungsverhältnis von konzentrierten Produkten">
       <Container>
         <h1 className="mt-2 mb-6 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-gray-200">
           Mischungsrechner

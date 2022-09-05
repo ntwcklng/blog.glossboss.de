@@ -3,6 +3,8 @@ import Layout from "@components/layout";
 import Container from "@components/container";
 import Image from "next/image";
 import Link from "next/link";
+import { siteUrl } from "@lib/config";
+
 const renderImages = [
   "https://glossbossuploader.s3.eu-central-1.amazonaws.com/hdn18E7_m4ivUqveowyuf-3ph/DSC01426.jpg",
   "https://glossbossuploader.s3.eu-central-1.amazonaws.com/oeSVKWiJmMBrBwOnopxXE-/Unbenannt-1.jpg",
@@ -10,7 +12,10 @@ const renderImages = [
 ];
 export default function About() {
   return (
-    <Layout>
+    <Layout
+      url={`${siteUrl}/about-us`}
+      title="Über GLOSSBOSS"
+      description="Wer und was ist GLOSSBOSS?">
       <Container>
         <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
           Über GLOSSBOSS
