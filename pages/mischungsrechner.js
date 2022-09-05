@@ -22,6 +22,17 @@ export default function Mischungsrechner() {
     13000,
     20000
   ];
+  const bottleValuesLabel = [
+    100,
+    200,
+    250,
+    473,
+    500,
+    750,
+    "1l",
+    "13l",
+    "20l"
+  ];
   useEffect(() => {
     setDil(
       dilution(
@@ -50,7 +61,6 @@ export default function Mischungsrechner() {
                   className="appearance-none block w-full  border border-gray-100 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700 bg-gray-50 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-500"
                   id="in1"
                   type="text"
-                  defaultValue={in1}
                   value={in1}
                   onChange={e => {
                     e.preventDefault();
@@ -69,7 +79,6 @@ export default function Mischungsrechner() {
                   className="appearance-none block w-full  border border-gray-100 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700  bg-gray-50 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-500"
                   id="in2"
                   type="text"
-                  defaultValue={in2}
                   value={in2}
                   onChange={e => {
                     e.preventDefault();
@@ -82,15 +91,21 @@ export default function Mischungsrechner() {
                 <label
                   className="block uppercase tracking-wide text-gray/600 text-xs font-bold mb-2 dark:text-gray-300"
                   htmlFor="bottleSlider">
-                  Flaschengrösse in ml
+                  {bottleValues[inBottle] > 1000
+                    ? "Eimergröße"
+                    : "Flaschengröße"}
                 </label>
-                <span>{bottleValues[inBottle]}</span>
+                <span>
+                  {bottleValues[inBottle] > 1000
+                    ? bottleValues[inBottle] / 1000
+                    : bottleValues[inBottle]}{" "}
+                  {bottleValues[inBottle] > 1000 ? "Liter" : "ml"}
+                </span>
                 <input
                   type="range"
                   className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
                   min="0"
                   max="8"
-                  defaultValue={inBottle}
                   value={inBottle}
                   step="1"
                   id="bottleSlider"
@@ -101,13 +116,17 @@ export default function Mischungsrechner() {
                 />
                 <div className="w-full flex justify-between text-xs px-2">
                   {bottleValues.map((val, i) => {
-                    return <span key={i}>{val}</span>;
+                    return (
+                      <span key={i} className="font-mono">
+                        {bottleValuesLabel[i]}
+                      </span>
+                    );
                   })}
                 </div>
               </div>
             </div>
           </form>
-          <div className="mx-auto max-w-2xl px-8 py-8 mt-3 text-xs text-gray-700 rounded-2xl bg-gray-50 dark:bg-gray-800 dark:text-gray-400 text-center">
+          <div className="mx-auto max-w-2xl px-8 py-8 mt-3 text-xs text-gray-700 rounded-2xl bg-gray-50 dark:bg-gray-700 dark:text-gray-400 text-center">
             Dein Mischungsverhältnis:
             <span className="text-blue-600 block text-2xl font-semibold my-2">
               {dil.part1}ml : {dil.part2}ml
@@ -148,7 +167,7 @@ export default function Mischungsrechner() {
                           }}
                           className="bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100 w-full md:w-1/3">
                           1:4 500ml Flasche
-                        </Button>{" "}
+                        </Button>
                         <Button
                           className="bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100 w-full md:w-1/3"
                           onClick={() => {
@@ -157,6 +176,15 @@ export default function Mischungsrechner() {
                             setBottle(4);
                           }}>
                           1:10 500ml Flasche
+                        </Button>
+                        <Button
+                          className="bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100 w-full md:w-1/3"
+                          onClick={() => {
+                            setIn1(1);
+                            setIn2(4);
+                            setBottle(6);
+                          }}>
+                          1:4 1 Liter Flasche
                         </Button>
                         <Button
                           className="bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100 w-full md:w-1/3"
@@ -175,6 +203,15 @@ export default function Mischungsrechner() {
                           }}
                           className="bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100 w-full md:w-1/3">
                           1:500 13 Liter Eimer
+                        </Button>
+                        <Button
+                          onClick={() => {
+                            setIn1(1);
+                            setIn2(1500);
+                            setBottle(7);
+                          }}
+                          className="bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100 w-full md:w-1/3">
+                          1:1500 13 Liter Eimer
                         </Button>
                       </div>
                     </Disclosure.Panel>

@@ -38,7 +38,7 @@ export default function About() {
               wurde von Marvin und vielen weiteren GLOSSBOSSEN
               gegründet: Alex, Mark, Ronny, Jones, Sven, Chris, noch
               ein Alex, Rene, Michael und Dirk waren seit den ersten
-              Stunden dabei und unterstützen regelmäßig mit
+              Stunden dabei und unterstützten regelmäßig mit
               Produkttests, Anleitungen und Pflegeberichten.
             </p>
             <p>

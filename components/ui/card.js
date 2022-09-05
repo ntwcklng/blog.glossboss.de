@@ -57,13 +57,13 @@ export default function Card({ data, aspect }) {
           }>
           <a
             target={isExternal ? "_blank" : "_self"}
-            className="bg-gradient-to-r from-purple-200 to-green-200 dark:from-purple-700 dark:to-fuchsia-700
-          bg-[length:0px_10px]
+            className="bg-gradient-to-r from-purple-200 to-green-200 dark:from-purple-800 dark:to-green-800
+          bg-[length:0px_7px]
           bg-left-bottom
           bg-no-repeat
           transition-[background-size]
           duration-300
-          hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
+          hover:bg-[length:100%_1px] group-hover:bg-[length:100%_7px]">
             {isExternal ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ export default function Card({ data, aspect }) {
               ""
             )}
             {data.title}
-            <span className="text-sm dark:text-gray-400 text-gray-800">
+            <span className="text-sm dark:text-gray-200 text-gray-800">
               {" "}
               - {data.subTitle}
             </span>
