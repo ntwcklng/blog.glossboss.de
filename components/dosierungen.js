@@ -4,7 +4,7 @@ import Container from "./container";
 import Markdown from "react-markdown";
 import Link from "next/link";
 
-export default function dosierungen({ produkte = [] }) {
+export default function Dosierungen({ produkte = [] }) {
   const [searchInput, setSearchInput] = useState("");
   return (
     <Container>
@@ -43,6 +43,7 @@ export default function dosierungen({ produkte = [] }) {
             return (
               <Disclosure
                 as="div"
+                key={i}
                 className={`${
                   String(produkt.fields.title.toLowerCase()).includes(
                     searchInput.toLowerCase()
