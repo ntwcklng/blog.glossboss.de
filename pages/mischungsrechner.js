@@ -6,6 +6,7 @@ import dilution from "dilution";
 import { Disclosure } from "@headlessui/react";
 import { Button } from "@components/ui/button";
 import { siteUrl } from "@lib/config";
+import Link from "next/link";
 
 export default function Mischungsrechner() {
   const [in1, setIn1] = useState(1);
@@ -217,6 +218,12 @@ export default function Mischungsrechner() {
                           className="bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-600 dark:text-gray-100 w-full md:w-1/3">
                           1:1500 13 Liter Eimer
                         </Button>
+                        <Link href="/dosierungen">
+                          <a className="mt-6 text-blue-600 underline">
+                            Produktübersicht mit den nötigen
+                            Dosierungen/Mischungsverhältnissen
+                          </a>
+                        </Link>
                       </div>
                     </Disclosure.Panel>
                   </>

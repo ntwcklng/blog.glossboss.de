@@ -11,9 +11,8 @@ export default function Navbar(props) {
   ];
   const rightmenu = [
     {
-      label: "Detailing",
-      href: "https://detailing.glossboss.de",
-      external: true
+      label: "Dosierungen",
+      href: "/dosierungen"
     },
     {
       label: "Shop ",
