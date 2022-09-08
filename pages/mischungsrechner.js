@@ -63,7 +63,7 @@ export default function Mischungsrechner() {
                   Verhähltnis 1
                 </label>
                 <input
-                  className="appearance-none block w-full  border border-gray-100 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700 bg-gray-50 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-500"
+                  className="appearance-none block w-full  border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600"
                   id="in1"
                   type="text"
                   value={in1}
@@ -81,7 +81,7 @@ export default function Mischungsrechner() {
                   Verhähltnis 2
                 </label>
                 <input
-                  className="appearance-none block w-full  border border-gray-100 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700  bg-gray-50 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-500"
+                  className="appearance-none block w-full  border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700  bg-gray-100 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600"
                   id="in2"
                   type="text"
                   value={in2}
@@ -108,7 +108,7 @@ export default function Mischungsrechner() {
                 </span>
                 <input
                   type="range"
-                  className="w-full h-1 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                  className="w-full h-1 bg-gray-300 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
                   min="0"
                   max="8"
                   value={inBottle}
@@ -131,9 +131,9 @@ export default function Mischungsrechner() {
               </div>
             </div>
           </form>
-          <div className="mx-auto max-w-2xl px-8 py-8 mt-3 text-xs text-gray-700 rounded-2xl bg-gray-50 dark:bg-gray-700 dark:text-gray-400 text-center">
+          <div className="mx-auto max-w-2xl px-8 py-8 mt-3 text-xs text-gray-700 rounded-2xl bg-gray-200 dark:bg-gray-700 dark:text-gray-300 text-center">
             Dein Mischungsverhältnis:
-            <span className="text-blue-600 block text-2xl font-semibold my-2">
+            <span className="text-blue-600 block text-2xl font-semibold my-2 dark:text-blue-300">
               {dil.part1}ml : {dil.part2}ml
             </span>
           </div>
@@ -142,7 +142,7 @@ export default function Mischungsrechner() {
               <Disclosure>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="dark:bg-gray-700 dark:text-gray-100 flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium text-gray-900 hover:bg-blue-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75 ">
+                    <Disclosure.Button className="dark:bg-gray-700 dark:text-gray-100 flex w-full justify-between rounded-lg bg-gray-100 px-4 py-2 text-left text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75 ">
                       <span>
                         Beliebte und gängige Mischungsverhältnisse
                       </span>
@@ -232,7 +232,7 @@ export default function Mischungsrechner() {
               <Disclosure as="div" className="mt-2">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="dark:bg-gray-700 dark:text-gray-100 flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium text-gray-900 hover:bg-blue-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
+                    <Disclosure.Button className="dark:bg-gray-700 dark:text-gray-100 flex w-full justify-between rounded-lg bg-gray-100 px-4 py-2 text-left text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
                       <span>
                         Warum ein Mischungsverhältnisrechner?
                       </span>

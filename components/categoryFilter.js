@@ -8,7 +8,7 @@ export default function CategoryFilter() {
   return (
     <Menu as="div" className=" mx-auto inline-block max-w-full">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-gray-50 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-blue-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:bg-gray-600 dark:text-gray-200">
+        <Menu.Button className="inline-flex w-full justify-center rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:bg-gray-600 dark:text-gray-200">
           Kategorien{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"

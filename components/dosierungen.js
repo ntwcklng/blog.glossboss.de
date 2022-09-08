@@ -29,9 +29,9 @@ export default function Dosierungen({ produkte = [] }) {
             </svg>
           </label>
           <input
-            className="appearance-none block md:w-1/2 w-full border border-gray-100 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700 bg-gray-50 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-500"
+            className="appearance-none block md:w-1/2 w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700 bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-500"
             id="in1"
-            type="text"
+            type="search"
             placeholder="suche"
             value={searchInput}
             onChange={e => {
@@ -53,7 +53,7 @@ export default function Dosierungen({ produkte = [] }) {
                 }`}>
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="dark:bg-gray-700 dark:text-gray-100 flex w-full justify-between rounded-lg bg-gray-50 px-4 py-2 text-left text-sm font-medium text-gray-900 hover:bg-blue-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
+                    <Disclosure.Button className="dark:bg-gray-700 dark:text-gray-100 flex w-full justify-between rounded-lg bg-gray-100 px-4 py-2 text-left text-sm font-medium text-gray-900 hover:bg-gray-200 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75">
                       <span>{produkt.fields.title}</span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

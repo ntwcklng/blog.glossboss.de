@@ -18,7 +18,7 @@ export function ScrollTop(params) {
     <>
       {showButton && (
         <div
-          className="w-9 h-9 bg-gray-100 hover:bg-gray-200 rounded-full fixed bottom-4 right-4 hover:-translate-y-1 transition-all flex justify-center items-center dark:bg-gray-600 shadow-lg"
+          className="w-9 h-9 bg-gray-200 hover:bg-gray-200 rounded-full fixed bottom-4 right-4 hover:-translate-y-1 transition-all flex justify-center items-center dark:bg-gray-700 dark:border-gray-500 shadow-sm border-gray-300 border hover:shadow-md"
           onClick={scrollToTop}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

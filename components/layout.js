@@ -25,7 +25,7 @@ export default function Layout(props) {
           site_name: props.title
         }}
       />
-      <div className="antialiased text-gray-800 dark:bg-gray-800 dark:text-gray-400 min-h-screen">
+      <div className="antialiased text-gray-800 dark:bg-gray-800 dark:text-gray-400 min-h-screen bg-stone-50 purple:bg-purple-700">
         <Navbar />
         <div>{children}</div>
         <ScrollTop />
