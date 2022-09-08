@@ -136,24 +136,16 @@ export default function Home({ posts }) {
             <strong>Weitere Infos zum Thema Datenschutz</strong>
           </p>
           <p>
-            Unser Blog besteht aus statischen Seiten. Das bedeutet das
-            wir Inhalte nicht von externen Anbietern oder Diensten
-            beziehen (z.B. aus einer Datenbank). Es werden absolut
-            keine Informationen vom Besucher gespeichert, da wir auch
-            auf Analyse durch Google-Analytics und andere Dienste
-            verzichten. Dieser Blog kommuniziert mit keiner anderen
-            Website.
+            Unser Blog besteht aus statischen Seiten. Das bedeutet,
+            dass wir Inhalte nicht von externen Anbietern oder
+            Diensten beziehen (z.B. aus einer Datenbank). Es werden
+            absolut keine Informationen vom Besucher gespeichert, da
+            wir auch auf Analyse durch Google-Analytics und andere
+            Dienste verzichten. Dieser Blog kommuniziert mit keiner
+            anderen Website.
           </p>
         </div>
       </Container>
     </Layout>
   );
 }
-// export async function getStaticProps() {
-//   const posts = await getPosts("Videos");
-//   return {
-//     props: {
-//       posts
-//     }
-//   };
-// }

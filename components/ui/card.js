@@ -19,7 +19,7 @@ export default function Card({ data, aspect }) {
     <div className="cursor-pointer group" key={data.slug}>
       <div
         className={cx(
-          "relative overflow-hidden transition-all bg-gray-100 rounded-md dark:bg-gray-600  hover:scale-105",
+          "relative overflow-hidden transition-all bg-gray-200 rounded-md dark:bg-gray-600  hover:scale-105 hover:rotate-1",
           aspect === "landscape" ? "aspect-video" : "aspect-[4/3]"
         )}>
         <Link

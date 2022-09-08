@@ -17,7 +17,7 @@ export default function PostList({ posts = [], category = "" }) {
   };
   return (
     <Container>
-      <div className="grid gap-10 lg:gap-10 md:grid-cols-2">
+      <div className="grid gap-10 lg:gap-12 md:grid-cols-2">
         {posts.slice(0, 2).map((post, i) => {
           return (
             <Card data={post.fields} aspect="landscape" key={i} />
