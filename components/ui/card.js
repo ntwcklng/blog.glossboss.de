@@ -10,6 +10,7 @@ import Image from "next/image";
 import { CategoryLabel } from "@components/ui/categoryLabel";
 import { format, parseISO } from "date-fns";
 import { glossbosse } from "@lib/config";
+import { ExternalLink } from "@components/icons";
 
 export default function Card({ data, aspect }) {
   const isExternal =
@@ -47,7 +48,7 @@ export default function Card({ data, aspect }) {
           </a>
         </Link>
       </div>
-      <CategoryLabel>{data.category}</CategoryLabel>
+      <CategoryLabel className="mt-4">{data.category}</CategoryLabel>
       <h2 className="mt-2 text-lg font-semibold dark:text-gray-100 text-gray-700">
         <Link
           href={
@@ -64,23 +65,7 @@ export default function Card({ data, aspect }) {
           transition-[background-size]
           duration-300
           hover:bg-[length:100%_1px] group-hover:bg-[length:100%_7px]">
-            {isExternal ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-4 h-4 mr-1 inline">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            ) : (
-              ""
-            )}
+            {isExternal ? <ExternalLink className="mr-1" /> : ""}
             {data.title}
             <span className="text-sm dark:text-gray-200 text-gray-800">
               {" "}

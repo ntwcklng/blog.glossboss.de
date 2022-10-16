@@ -3,26 +3,14 @@ import { allCategories } from "@utils/allCategories";
 import { Fragment } from "react";
 import { MyLink } from "@utils/myLink";
 import { CategoryLabel } from "./ui/categoryLabel";
+import { FilterIcon } from "./icons";
 
 export default function CategoryFilter() {
   return (
     <Menu as="div" className=" mx-auto inline-block max-w-full">
       <div>
         <Menu.Button className="inline-flex w-full justify-center rounded-md bg-gray-200 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:bg-gray-600 dark:text-gray-200">
-          Kategorien{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-5 h-5 ml-4">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
-            />
-          </svg>
+          Kategorien <FilterIcon />
         </Menu.Button>
 
         <>

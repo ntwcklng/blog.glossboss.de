@@ -3,6 +3,7 @@ import { useState } from "react";
 import Container from "./container";
 import Markdown from "react-markdown";
 import Link from "next/link";
+import { SearchIcon } from "./icons";
 
 export default function Dosierungen({ produkte = [] }) {
   const [searchInput, setSearchInput] = useState("");
@@ -13,20 +14,7 @@ export default function Dosierungen({ produkte = [] }) {
           <label
             className="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2 dark:text-gray-300"
             htmlFor="in1">
-            Produkt suchen{" "}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1}
-              stroke="currentColor"
-              className="w-5 h-5 inline ml-1">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
+            Produkt suchen <SearchIcon />
           </label>
           <input
             className="appearance-none block md:w-1/2 w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700 bg-gray-100 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-500"

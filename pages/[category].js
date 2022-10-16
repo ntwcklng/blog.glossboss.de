@@ -1,13 +1,9 @@
-import { NextSeo } from "next-seo";
 import PostList from "@components/postlist";
 import getPosts from "@utils/getPosts";
 import Layout from "@components/layout";
 import { allCategories } from "@utils/allCategories";
 import { stringify } from "postcss";
 import { CategoryLabel } from "@components/ui/categoryLabel";
-import { Menu, Transition } from "@headlessui/react";
-import Link from "next/link";
-import { forwardRef, Fragment, useEffect, useState } from "react";
 import Container from "@components/container";
 import CategoryFilter from "@components/categoryFilter";
 import { siteUrl } from "@lib/config";

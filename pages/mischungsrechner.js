@@ -60,7 +60,7 @@ export default function Mischungsrechner() {
                 <label
                   className="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2 dark:text-gray-300"
                   htmlFor="in1">
-                  Verhähltnis 1
+                  Verhältnis 1
                 </label>
                 <input
                   className="appearance-none block w-full  border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700 bg-gray-100 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600"
@@ -78,7 +78,7 @@ export default function Mischungsrechner() {
                 <label
                   className="block uppercase tracking-wide text-gray/600 text-xs font-bold mb-2 dark:text-gray-300"
                   htmlFor="in2">
-                  Verhähltnis 2
+                  Verhältnis 2
                 </label>
                 <input
                   className="appearance-none block w-full  border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-gray-700  bg-gray-100 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600"
