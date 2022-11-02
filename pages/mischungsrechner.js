@@ -76,7 +76,7 @@ export default function Mischungsrechner() {
               <div className="w-full sm:w-1/2 px-3">
                 {" "}
                 <label
-                  className="block uppercase tracking-wide text-gray/600 text-xs font-bold mb-2 dark:text-gray-300"
+                  className="block uppercase tracking-wide text-gray-600 text-xs font-bold mb-2 dark:text-gray-300"
                   htmlFor="in2">
                   Verhältnis 2
                 </label>
@@ -131,9 +131,11 @@ export default function Mischungsrechner() {
               </div>
             </div>
           </form>
-          <div className="mx-auto max-w-2xl px-8 py-8 mt-3 text-xs text-gray-700 rounded-2xl bg-gray-200 dark:bg-gray-700 dark:text-gray-300 text-center">
-            Dein Mischungsverhältnis:
-            <span className="text-blue-600 block text-2xl font-semibold my-2 dark:text-blue-300">
+          <div className="mx-auto max-w-2xl px-8 py-8 mt-3 text-xs rounded-2xl bg-gray-200 dark:bg-gray-700 dark:text-gray-300 text-center">
+            <span className="uppercase text-gray-500 tracking-wide">
+              Dein Mischungsverhältnis
+            </span>
+            <span className="text-blue-600 block text-3xl font-semibold my-2 dark:text-blue-400">
               {dil.part1}ml : {dil.part2}ml
             </span>
           </div>
