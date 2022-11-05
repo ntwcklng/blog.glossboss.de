@@ -47,9 +47,9 @@ export default function Navbar(props) {
                     <a>
                       {" "}
                       <Image
-                        src="/glossboss-logo.svg"
+                        src="/2022-236-150.png"
                         alt="Logo"
-                        width={250}
+                        width={157}
                         height={100}
                         priority={true}
                         layout="fixed"
