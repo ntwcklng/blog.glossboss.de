@@ -33,7 +33,7 @@ export default function CategoryFilter() {
                             plain={true}
                             className={`${
                               active
-                                ? "bg-gray-50 text-gray-700 dark:bg-gray-600 dark:text-gray-100"
+                                ? "bg-gray-50 text-gray-700 dark:bg-gray-400 "
                                 : " "
                             }group flex w-full items-center rounded-md px-2 py-2 text-md mt-0`}>
                             {cat}

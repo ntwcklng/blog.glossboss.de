@@ -23,9 +23,9 @@ export function CategoryLabel(props) {
       <span
         className={cx(
           "inline-block text-xs font-medium tracking-wider uppercase ",
-          `hover:${color[props.children] || color.News}`,
 
-          props.className
+          props.className,
+          `hover:${color[props.children]}`
         )}>
         {props.children}
       </span>

@@ -58,7 +58,7 @@ export default function Card({ data, aspect }) {
           }>
           <a
             target={isExternal ? "_blank" : "_self"}
-            className="bg-gradient-to-r from-purple-200 to-green-200 dark:from-purple-800 dark:to-green-800
+            className="bg-gradient-to-r from-purple-300 to-orange-200 dark:from-purple-800 dark:to-orange-700
           bg-[length:0px_7px]
           bg-left-bottom
           bg-no-repeat
