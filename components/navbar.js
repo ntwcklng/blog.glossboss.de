@@ -1,6 +1,6 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Container from "./container";
 import { ExternalLink } from "./icons";
 
@@ -54,9 +54,7 @@ export default function Navbar(props) {
                       width={157}
                       height={100}
                       priority={true}
-                      layout="fixed"
-                      className="cursor-pointer"
-                    />
+                      className="cursor-pointer" />
 
                   </Link>
                   <Disclosure.Button

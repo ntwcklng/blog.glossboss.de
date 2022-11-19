@@ -1,7 +1,7 @@
 import { NextSeo } from "next-seo";
 import Layout from "@components/layout";
 import Container from "@components/container";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 import { siteUrl } from "@lib/config";
 
@@ -30,9 +30,11 @@ export default function About() {
                   <Image
                     src={k}
                     alt=""
-                    layout="fill"
-                    objectFit="cover"
-                  />
+                    fill
+                    sizes="100vw"
+                    style={{
+                      objectFit: "cover"
+                    }} />
                 </div>
               );
             })}

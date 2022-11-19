@@ -2,7 +2,7 @@ import Markdown from "react-markdown";
 import Layout from "@components/layout";
 import Container from "@components/container";
 import { CategoryLabel } from "@components/ui/categoryLabel";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { format, parseISO } from "date-fns";
 import de from "date-fns/locale/de";
 import Link from "next/link";
@@ -78,10 +78,10 @@ export default function Post({ post }) {
               <div className="relative flex-shrink-0 w-12 h-12">
                 <Image
                   src={glossbosse[post.fields.author].image}
-                  layout="fill"
                   alt={post.fields.title}
                   className="rounded-full"
-                />
+                  fill
+                  sizes="100vw" />
               </div>
               <div>
                 <p className="text-gray-700 dark:text-gray-400">
@@ -111,11 +111,13 @@ export default function Post({ post }) {
           <Image
             src={post.fields.postImage}
             alt={post.fields.title}
-            layout="fill"
             loading="eager"
-            objectFit="cover"
             priority={true}
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }} />
         ) : (
           <div className="bg-gradient-to-r from-[#00f260] to-[#0575e6] h-56 animate-pulse"></div>
         )}

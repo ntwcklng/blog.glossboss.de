@@ -1,6 +1,6 @@
 import { glossbosse } from "@lib/config";
 import Link from "next/link";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function AuthorCard({ author }) {
   return (
@@ -9,11 +9,13 @@ export default function AuthorCard({ author }) {
         <div className="relative flex-shrink-0 w-24 h-24 mt-1 ">
           <Image
             src={glossbosse[author].image}
-            objectFit="cover"
             alt={author}
-            layout="fill"
             className="rounded-full"
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }} />
         </div>
         <div>
           <div className="mb-3">

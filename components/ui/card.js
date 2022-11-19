@@ -6,7 +6,7 @@ import {
   getThumbnail
 } from "@utils/posts";
 import { cx } from "@utils/all";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { CategoryLabel } from "@components/ui/categoryLabel";
 import { format, parseISO } from "date-fns";
 import { glossbosse } from "@lib/config";
@@ -32,8 +32,6 @@ export default function Card({ data, aspect }) {
           target={isExternal ? "_blank" : "_self"}>
 
           <Image
-            layout="fill"
-            objectFit="cover"
             className="transition-all"
             alt={data.title}
             priority={true}
@@ -45,7 +43,11 @@ export default function Card({ data, aspect }) {
                   )
                 : generateDefaultThumb(data.category)
             }
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }} />
 
         </Link>
       </div>
@@ -83,12 +85,13 @@ export default function Card({ data, aspect }) {
                 glossbosse[data.author]?.image ||
                 "https://glossbossuploader.s3.eu-central-1.amazonaws.com/PhlvRt4gAFWU8eoiSVBmF-/Logo-Quadrat-Round.png"
               }
-              objectFit="cover"
-              layout="fill"
               alt={data.author}
-              sizes="30px"
               className="rounded-full"
-            />
+              fill
+              sizes="30px"
+              style={{
+                objectFit: "cover"
+              }} />
           </div>
           <span className="text-sm">{data.author}</span>
         </div>
