@@ -81,7 +81,8 @@ export default function Post({ post }) {
                   alt={post.fields.title}
                   className="rounded-full"
                   fill
-                  sizes="100vw" />
+                  sizes="100vw"
+                />
               </div>
               <div>
                 <p className="text-gray-700 dark:text-gray-400">
@@ -117,7 +118,8 @@ export default function Post({ post }) {
             sizes="100vw"
             style={{
               objectFit: "cover"
-            }} />
+            }}
+          />
         ) : (
           <div className="bg-gradient-to-r from-[#00f260] to-[#0575e6] h-56 animate-pulse"></div>
         )}
@@ -132,14 +134,12 @@ export default function Post({ post }) {
             <Link
               href="/"
               className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-400 hover:-translate-x-1 transition-all">
-              
-                ← Alle Beiträge
-              
+              ← Alle Beiträge
             </Link>
             <Link
               href={`/${post.fields.category.toLowerCase()}`}
               className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-400 hover:translate-x-1 transition-all">
-              in{post.fields.category}stöbern →
+              in {post.fields.category} stöbern →
             </Link>
           </div>
           {glossbosse[post?.fields.author].bio != "" && (

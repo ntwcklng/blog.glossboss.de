@@ -15,7 +15,8 @@ export default function AuthorCard({ author }) {
             sizes="100vw"
             style={{
               objectFit: "cover"
-            }} />
+            }}
+          />
         </div>
         <div>
           <div className="mb-3">
@@ -26,7 +27,7 @@ export default function AuthorCard({ author }) {
           <div>{glossbosse[author].bio}</div>
           <div className="mt-3 text-sm text-blue-600 rounded-full dark:text-blue-400 hover:translate-x-1 transition-all">
             <Link href={glossbosse[author].slug} className="">
-              Mehr Beiträge von{glossbosse[author].displayName}→
+              Mehr Beiträge von {glossbosse[author].displayName} →
             </Link>
           </div>
         </div>
