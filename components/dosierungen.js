@@ -62,25 +62,24 @@ export default function Dosierungen({ produkte = [] }) {
                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-700 dark:text-gray-100 prose prose-base prose-stone dark:prose-invert prose-a:text-blue-500">
                       <Markdown>{produkt.fields.body}</Markdown>
                       {produkt.fields.shoplink && (
-                        <Link href={produkt.fields.shoplink}>
-                          <a target="_blank">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth={1}
-                              stroke="currentColor"
-                              className="w-4 h-4 inline mr-1">
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                              />
-                            </svg>
-                            {produkt.fields.title} im GLOSSBOSS-Shop
-                            kaufen
-                          </a>
-                        </Link>
+                        (<Link href={produkt.fields.shoplink} target="_blank">
+
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={1}
+                            stroke="currentColor"
+                            className="w-4 h-4 inline mr-1">
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                            />
+                          </svg>
+                          {produkt.fields.title}im GLOSSBOSS-Shop
+                                                      kaufen
+                        </Link>)
                       )}
                     </Disclosure.Panel>
                   </>

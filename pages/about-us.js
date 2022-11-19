@@ -54,14 +54,16 @@ export default function About() {
               </Link>{" "}
               und diverse andere Aktivitäten im Bereich Social Media
               bzw. Medien wie zum Beispiel mit dem{" "}
-              <Link href="https://nass-und-schaumig.podigee.io/">
-                <a target="_blank">Podcast Nass und Schaumig</a>
+              <Link href="https://nass-und-schaumig.podigee.io/" target="_blank">
+                Podcast Nass und Schaumig
               </Link>
               , als Moderator auf der DCON oder als{" "}
-              <Link href="/news/glossboss-auf-der-automechanika-frankfurt-2022">
-                <a target="_blank">
+              <Link
+                href="/news/glossboss-auf-der-automechanika-frankfurt-2022"
+                target="_blank">
+                
                   Influencer auf der Automechanika
-                </a>
+                
               </Link>
               .
             </p>

@@ -28,24 +28,25 @@ export default function Card({ data, aspect }) {
             isExternal
               ? data.externerLink
               : generateSlug(data?.category, data?.slug)
-          }>
-          <a target={isExternal ? "_blank" : "_self"}>
-            <Image
-              layout="fill"
-              objectFit="cover"
-              className="transition-all"
-              alt={data.title}
-              priority={true}
-              src={
-                data.postImage
-                  ? data.postImage.replace(
-                      "amazonaws.com",
-                      "amazonaws.com/thumbnails"
-                    )
-                  : generateDefaultThumb(data.category)
-              }
-            />
-          </a>
+          }
+          target={isExternal ? "_blank" : "_self"}>
+
+          <Image
+            layout="fill"
+            objectFit="cover"
+            className="transition-all"
+            alt={data.title}
+            priority={true}
+            src={
+              data.postImage
+                ? data.postImage.replace(
+                    "amazonaws.com",
+                    "amazonaws.com/thumbnails"
+                  )
+                : generateDefaultThumb(data.category)
+            }
+          />
+
         </Link>
       </div>
       <CategoryLabel className="mt-4">{data.category}</CategoryLabel>
@@ -55,23 +56,23 @@ export default function Card({ data, aspect }) {
             isExternal
               ? data.externerLink
               : generateSlug(data?.category, data?.slug)
-          }>
-          <a
-            target={isExternal ? "_blank" : "_self"}
-            className="bg-gradient-to-r from-purple-300 to-orange-200 dark:from-purple-800 dark:to-orange-700
-          bg-[length:0px_7px]
-          bg-left-bottom
-          bg-no-repeat
-          transition-[background-size]
-          duration-300
-          hover:bg-[length:100%_1px] group-hover:bg-[length:100%_7px]">
-            {isExternal ? <ExternalLink className="mr-1" /> : ""}
-            {data.title}
-            <span className="text-sm dark:text-gray-200 text-gray-800">
-              {" "}
-              - {data.subTitle}
-            </span>
-          </a>
+          }
+          target={isExternal ? "_blank" : "_self"}
+          className="bg-gradient-to-r from-purple-300 to-orange-200 dark:from-purple-800 dark:to-orange-700
+        bg-[length:0px_7px]
+        bg-left-bottom
+        bg-no-repeat
+        transition-[background-size]
+        duration-300
+        hover:bg-[length:100%_1px] group-hover:bg-[length:100%_7px]">
+
+          {isExternal ? <ExternalLink className="mr-1" /> : ""}
+          {data.title}
+          <span className="text-sm dark:text-gray-200 text-gray-800">
+            {" "}
+            - {data.subTitle}
+          </span>
+
         </Link>
       </h2>
       <div className="flex items-center mt-3 space-x-3 text-gray-500 dark:text-gray-300">

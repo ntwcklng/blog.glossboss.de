@@ -23,10 +23,8 @@ export default function AuthorCard({ author }) {
           </div>
           <div>{glossbosse[author].bio}</div>
           <div className="mt-3 text-sm text-blue-600 rounded-full dark:text-blue-400 hover:translate-x-1 transition-all">
-            <Link href={glossbosse[author].slug}>
-              <a className="">
-                Mehr Beiträge von {glossbosse[author].displayName} →
-              </a>
+            <Link href={glossbosse[author].slug} className="">
+              Mehr Beiträge von{glossbosse[author].displayName}→
             </Link>
           </div>
         </div>

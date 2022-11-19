@@ -127,15 +127,17 @@ export default function Post({ post }) {
             <Markdown>{post.fields.body}</Markdown>
           </div>
           <div className="flex justify-center mt-7 mb-7">
-            <Link href="/">
-              <a className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-400 hover:-translate-x-1 transition-all">
+            <Link
+              href="/"
+              className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-400 hover:-translate-x-1 transition-all">
+              
                 ← Alle Beiträge
-              </a>
+              
             </Link>
-            <Link href={`/${post.fields.category.toLowerCase()}`}>
-              <a className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-400 hover:translate-x-1 transition-all">
-                in {post.fields.category} stöbern →
-              </a>
+            <Link
+              href={`/${post.fields.category.toLowerCase()}`}
+              className="px-5 py-2 text-sm text-blue-600 rounded-full dark:text-blue-400 hover:translate-x-1 transition-all">
+              in{post.fields.category}stöbern →
             </Link>
           </div>
           {glossbosse[post?.fields.author].bio != "" && (
