@@ -1,6 +1,6 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Container from "./container";
 import { ExternalLink } from "./icons";
 

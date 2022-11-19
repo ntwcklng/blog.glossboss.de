@@ -2,7 +2,7 @@ import Markdown from "react-markdown";
 import Layout from "@components/layout";
 import Container from "@components/container";
 import { CategoryLabel } from "@components/ui/categoryLabel";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { format, parseISO } from "date-fns";
 import de from "date-fns/locale/de";
 import Link from "next/link";

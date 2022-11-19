@@ -6,7 +6,7 @@ import {
   getThumbnail
 } from "@utils/posts";
 import { cx } from "@utils/all";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { CategoryLabel } from "@components/ui/categoryLabel";
 import { format, parseISO } from "date-fns";
 import { glossbosse } from "@lib/config";
