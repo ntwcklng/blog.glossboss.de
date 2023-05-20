@@ -34,7 +34,8 @@ export default function About() {
                     sizes="100vw"
                     style={{
                       objectFit: "cover"
-                    }} />
+                    }}
+                  />
                 </div>
               );
             })}
@@ -52,20 +53,20 @@ export default function About() {
               Mittlerweile ist GLOSSBOSS vielseitiger aufgestellt. Zu
               der Aufbereitung gesellt sich ein{" "}
               <Link href="https://glossboss-shop.de" target="_blank">
-                Onineshop
+                Onlineshop
               </Link>{" "}
               und diverse andere Aktivitäten im Bereich Social Media
               bzw. Medien wie zum Beispiel mit dem{" "}
-              <Link href="https://nass-und-schaumig.podigee.io/" target="_blank">
+              <Link
+                href="https://nass-und-schaumig.podigee.io/"
+                target="_blank">
                 Podcast Nass und Schaumig
               </Link>
               , als Moderator auf der DCON oder als{" "}
               <Link
                 href="/news/glossboss-auf-der-automechanika-frankfurt-2022"
                 target="_blank">
-                
-                  Influencer auf der Automechanika
-                
+                Influencer auf der Automechanika
               </Link>
               .
             </p>
