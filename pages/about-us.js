@@ -52,7 +52,7 @@ export default function About() {
             <p>
               Mittlerweile ist GLOSSBOSS vielseitiger aufgestellt. Zu
               der Aufbereitung gesellt sich ein{" "}
-              <Link href="https://glossboss-shop.de" target="_blank">
+              <Link href="https://glossboss.de" target="_blank">
                 Onlineshop
               </Link>{" "}
               und diverse andere Aktivitäten im Bereich Social Media

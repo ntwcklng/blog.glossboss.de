@@ -17,7 +17,7 @@ export default function Navbar(props) {
     },
     {
       label: "Shop ",
-      href: "https://glossboss-shop.de?ref=gb.de",
+      href: "https://glossboss.de?ref=gb.de",
       external: true
     },
     { label: "Impressum", href: "/impressum" }
@@ -32,21 +32,18 @@ export default function Navbar(props) {
               <div className="flex flex-wrap justify-between md:gap-10 md:flex-nowrap">
                 <div className="flex-col items-center justify-start order-1 hidden w-full lg:flex lg:flex-row lg:justify-end lg:w-auto lg:order-none lg:flex-1 whitespace-nowrap">
                   {leftmenu.map((item, index) => (
-                    (<Link
+                    <Link
                       href={item.href}
                       key={index}
                       className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-500 "
                       target={item.external ? "_blank" : ""}
                       rel={item.external ? "noopener" : ""}>
-
                       {item.label}
-
-                    </Link>)
+                    </Link>
                   ))}
                 </div>
                 <div className="flex justify-between items-center w-full lg:w-auto">
                   <Link href="/">
-
                     {" "}
                     <Image
                       src="/2022-236-150.png"
@@ -54,8 +51,8 @@ export default function Navbar(props) {
                       width={157}
                       height={100}
                       priority={true}
-                      className="cursor-pointer" />
-
+                      className="cursor-pointer"
+                    />
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
@@ -82,21 +79,19 @@ export default function Navbar(props) {
                 </div>
                 <div className="flex-col items-center justify-start order-2 hidden w-full lg:flex lg:flex-row lg:w-auto lg:flex-1 lg:order-none">
                   {rightmenu.map((item, index) => (
-                    (<Link
+                    <Link
                       href={item.href}
                       key={index}
                       className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-500 whitespace-nowrap"
                       target={item.external ? "_blank" : ""}
                       rel={item.external ? "noopener" : ""}>
-
                       {item.label}{" "}
                       {item.external ? (
                         <ExternalLink className="w-4 h-4 inline" />
                       ) : (
                         ""
                       )}
-
-                    </Link>)
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -110,13 +105,12 @@ export default function Navbar(props) {
                 <Disclosure.Panel>
                   <div className="flex flex-col items-center justify-start order-2 w-full lg:hidden border-b border-gray-100 dark:border-gray-600 pb-8">
                     {mobilemenu.map((item, index) => (
-                      (<Link
+                      <Link
                         href={item.href}
                         key={index}
                         className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
                         target={item.external ? "_blank" : ""}
                         rel={item.external ? "noopener" : ""}>
-
                         {item.label}{" "}
                         {item.external ? (
                           <svg
@@ -135,8 +129,7 @@ export default function Navbar(props) {
                         ) : (
                           ""
                         )}
-
-                      </Link>)
+                      </Link>
                     ))}
                   </div>
                 </Disclosure.Panel>
