@@ -1,7 +1,6 @@
 import { NextSeo } from "next-seo";
 import Layout from "@components/layout";
 import Container from "@components/container";
-import Image from "next/image";
 import Link from "next/link";
 import { siteUrl } from "@lib/config";
 
@@ -27,15 +26,7 @@ export default function About() {
                 <div
                   className="relative overflow-hidden rounded-md aspect-square odd:translate-y-10 odd:md:translate-y-16"
                   key={i}>
-                  <Image
-                    src={k}
-                    alt=""
-                    fill
-                    sizes="100vw"
-                    style={{
-                      objectFit: "cover"
-                    }}
-                  />
+                  <img src={k} alt="" />
                 </div>
               );
             })}

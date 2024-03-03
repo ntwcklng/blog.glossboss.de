@@ -2,7 +2,6 @@ import Markdown from "react-markdown";
 import Layout from "@components/layout";
 import Container from "@components/container";
 import { CategoryLabel } from "@components/ui/categoryLabel";
-import Image from "next/image";
 import { format, parseISO } from "date-fns";
 import de from "date-fns/locale/de";
 import Link from "next/link";
@@ -76,12 +75,10 @@ export default function Post({ post }) {
           <div className="flex justify-center mt-3 space-x-3 text-gray-500">
             <div className="flex items-center gap-3">
               <div className="relative flex-shrink-0 w-12 h-12">
-                <Image
+                <img
                   src={glossbosse[post.fields.author].image}
                   alt={post.fields.title}
                   className="rounded-full"
-                  fill
-                  sizes="100vw"
                 />
               </div>
               <div>
@@ -109,16 +106,10 @@ export default function Post({ post }) {
         className={`relative z-0 max-w-screen-lg mx-auto overflow-hidden lg:rounded-lg ${post
           .fields.postImage && "aspect-video"}`}>
         {post.fields.postImage ? (
-          <Image
+          <img
             src={post.fields.postImage}
             alt={post.fields.title}
-            loading="eager"
-            priority={true}
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover"
-            }}
+            className="object-cover lg:rounded-lg"
           />
         ) : (
           <div className="bg-gradient-to-r from-[#00f260] to-[#0575e6] h-56 animate-pulse"></div>
