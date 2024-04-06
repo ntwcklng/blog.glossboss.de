@@ -30,11 +30,9 @@ export default function Card({ data, aspect }) {
               : generateSlug(data?.category, data?.slug)
           }
           target={isExternal ? "_blank" : "_self"}>
-
-          <Image
-            className="transition-all"
+          <img
+            className="transition-all h-full w-full object-cover"
             alt={data.title}
-            priority={true}
             src={
               data.postImage
                 ? data.postImage.replace(
@@ -43,12 +41,7 @@ export default function Card({ data, aspect }) {
                   )
                 : generateDefaultThumb(data.category)
             }
-            fill
-            sizes="100vw"
-            style={{
-              objectFit: "cover"
-            }} />
-
+          />
         </Link>
       </div>
       <CategoryLabel className="mt-4">{data.category}</CategoryLabel>
@@ -67,14 +60,12 @@ export default function Card({ data, aspect }) {
         transition-[background-size]
         duration-300
         hover:bg-[length:100%_1px] group-hover:bg-[length:100%_7px]">
-
           {isExternal ? <ExternalLink className="mr-1" /> : ""}
           {data.title}
           <span className="text-sm dark:text-gray-200 text-gray-800">
             {" "}
             - {data.subTitle}
           </span>
-
         </Link>
       </h2>
       <div className="flex items-center mt-3 space-x-3 text-gray-500 dark:text-gray-300">
@@ -91,7 +82,8 @@ export default function Card({ data, aspect }) {
               sizes="30px"
               style={{
                 objectFit: "cover"
-              }} />
+              }}
+            />
           </div>
           <span className="text-sm">{data.author}</span>
         </div>
